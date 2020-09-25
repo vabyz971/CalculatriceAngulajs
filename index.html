@@ -16,7 +16,7 @@
     <div class="appClass" ng-controller="calculator">
         <div class="historique">
             <h2>Historique</h2>
-            <a href="" ng-click="archive()">archiver</a>
+            <a href="" ng-click="archive()">Suprimer</a>
             <span>
                 {{ histTodo.length }} opération
             </span>
@@ -36,26 +36,26 @@
                 <input class="value" type="text" name="" value="{{ display }}" readonly />
                 <span ng-click="c('')" value="c" class="clear">C</span>
                 <span ng-click="ac()" value="ac" class="">AC</span>
-                <span ng-click="math('/')" value="/" class="">/</span>
-                <span ng-click="math('%')" value="%" class="">%</span>
+                <span ng-click="math('/')" value="/" >/</span>
+                <span ng-click="math('%')" value="%" >%</span>
                 <span ng-click="math('(')" value="(" class="ortherOperation">(</span>
                 <span ng-click="math(')')" value=")" class="ortherOperation">)</span>
                 <span ng-click="math('*2')" value="^" class="ortherOperation">^</span>
                 <span ng-click="math('&')" value="&" class="ortherOperation">mod()</span>
-                <span ng-click="math('7')" value="7" class="">7</span>
-                <span ng-click="math('8')" value="8" class="">8</span>
-                <span ng-click="math('9')" value="9" class="">9</span>
-                <span ng-click="math('0')" value="0" class="">0</span>
-                <span ng-click="math('*')" value="*" class="">x</span>
-                <span ng-click="math('4')" value="4" class="">4</span>
-                <span ng-click="math('5')" value="5" class="">5</span>
-                <span ng-click="math('6')" value="6" class="">6</span>
-                <span ng-click="math('-')" value="-" class="">-</span>
-                <span ng-click="math('+')" value="+" class=" plus">+</span>
-                <span ng-click="math('1')" value="1" class="">1</span>
-                <span ng-click="math('2')" value="2" class="">2</span>
-                <span ng-click="math('3')" value="3" class="">3</span>
-                <span ng-click="math('.')" value="." class="">.</span>
+                <span ng-click="math('7')" value="7" >7</span>
+                <span ng-click="math('9')" value="9" >9</span>
+                <span ng-click="math('8')" value="8" >8</span>
+                <span ng-click="math('0')" value="0" >0</span>
+                <span ng-click="math('*')" value="*" >x</span>
+                <span ng-click="math('4')" value="4" >4</span>
+                <span ng-click="math('5')" value="5" >5</span>
+                <span ng-click="math('6')" value="6" >6</span>
+                <span ng-click="math('-')" value="-" >-</span>
+                <span ng-click="math('+')" value="+" plus">+</span>
+                <span ng-click="math('1')" value="1" >1</span>
+                <span ng-click="math('2')" value="2" >2</span>
+                <span ng-click="math('3')" value="3" >3</span>
+                <span ng-click="math('.')" value="." >.</span>
                 <span ng-click="e()" value="=" class="num equal">=</span>
             </form>
         </div>
