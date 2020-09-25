@@ -1,0 +1,215 @@
+:root {
+  --primary: #ffffff;
+  --seconde: #000000;
+  --borderTouch: #000000;
+  /* btn color */
+  --btnhover: #959595;
+  --btnclear: #f12b2b;
+  --btnequal: #a9ff58;
+  /* gradient Color */
+  --colorG1: rgb(131, 58, 180);
+  --colorG2: rgba(253, 29, 29, 1);
+  --colorG3: rgba(252, 176, 69, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+  background: var(--primary);
+}
+
+.appClass {
+  border: 2px solid var(--seconde);
+  border-radius: 20px;
+  padding: 20px;
+  background: #833ab4;
+  background: linear-gradient(142deg, var(--colorG1) 0%, var(--colorG2) 77%, var(--colorG3) 100%);
+}
+
+.calculator {
+  position: relative;
+  border-radius: 20px;
+  -webkit-box-shadow: 0px 0px 0px 2px var(--seconde);
+          box-shadow: 0px 0px 0px 2px var(--seconde);
+}
+
+.calculator form {
+  display: -ms-grid;
+  display: grid;
+}
+
+.calculator .value {
+  grid-column: span 8;
+  height: 50px;
+  text-align: right;
+  border: none;
+  outline: none;
+  padding: 5px 20px;
+  font-size: 21px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  background: var(--primary);
+  color: var(--borderTouch);
+}
+
+.calculator span {
+  display: -ms-grid;
+  display: grid;
+  width: 60px;
+  height: 60px;
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--seconde);
+  cursor: pointer;
+  place-items: center;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.calculator span.clear {
+  grid-column: span 2;
+  width: 120px;
+  background: var(--btnclear);
+}
+
+.calculator span.plus {
+  grid-row: span 2;
+  height: 120px;
+}
+
+.calculator span .ortherOperation {
+  display: block;
+}
+
+.calculator span.equal {
+  grid-column: span 5;
+  width: 100%;
+  background: var(--btnequal);
+  border-bottom-right-radius: 20px;
+}
+
+.calculator span:hover {
+  background-color: var(--btnhover);
+  -webkit-box-shadow: 0px 0px 5px 0px var(--btnhover);
+          box-shadow: 0px 0px 5px 0px var(--btnhover);
+}
+
+.historique {
+  height: 250px;
+  text-align: right;
+  color: var(--seconde);
+  margin-bottom: 20px;
+}
+
+.historique h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: var(--seconde);
+}
+
+.historique .list_operation {
+  overflow-y: scroll;
+  height: 70%;
+  padding: 5px;
+  margin: 10px 0px;
+}
+
+.historique a {
+  text-decoration: none;
+  color: var(--seconde);
+  background: var(--btnequal);
+  padding: 5px;
+  border-radius: 10px;
+  font-size: 12px;
+  -webkit-transition: all 0.3s cubic-bezier(0.18, 0.89, 0.75, 1.34);
+  transition: all 0.3s cubic-bezier(0.18, 0.89, 0.75, 1.34);
+}
+
+.historique a:hover {
+  background: var(--btnclear);
+}
+
+.historique ul {
+  list-style: none;
+}
+
+.historique ul li {
+  padding: 10px 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  -webkit-animation: fadeInTodo 1s;
+          animation: fadeInTodo 1s;
+  -webkit-transition: all 0.3s cubic-bezier(0.18, 0.89, 0.75, 1.34);
+  transition: all 0.3s cubic-bezier(0.18, 0.89, 0.75, 1.34);
+}
+
+.historique ul li span {
+  cursor: pointer;
+}
+
+.historique ul li:hover {
+  -webkit-transform: translateY(5px);
+          transform: translateY(5px);
+}
+
+.historique .done-true {
+  text-decoration: line-through;
+  color: white;
+}
+
+/* Animation */
+@-webkit-keyframes fadeInTodo {
+  from {
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1;
+  }
+}
+@keyframes fadeInTodo {
+  from {
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 600px) {
+  .calculator .value {
+    grid-column: span 5;
+  }
+  .calculator span.ortherOperation {
+    display: none;
+  }
+  .calculator span.equal {
+    grid-column: span 5;
+    width: 100%;
+    background: var(--btnequal);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
